@@ -1,8 +1,77 @@
-const form = document.getElementById('signup-form');
-const firstName = document.getElementById('firstName');
-const errorElement = document.getElementById('errorMessage');
+const form = document.querySelector('.signup-form');
+const firstName = form.firstName.value;
+const lastName = form.lastName.value;
+const userEmail = form.userEmail.value;
+const userPassword = form.userPassword.value;
+const userPhone = form.userPhone.value;
+const userName = form.userName.value;
+const feedback= document.querySelector('.feedback');
 
-form.addEventListener('submit', (e) =>{
+const firstNPattern = /^[a-zA-Z]{1,}$/;
+const lastNPattern = /^[a-zA-Z]{1,}$/;
+const userEmailPattern = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,})(\.[a-z]{2,})?$/
+const userPassPattern = /^[a-zA-Z\d]{6,}$/
+const userPhonePattern = /^(\d{3})-(\d{3})-(\d{4})$/
+const userNamePattern =/^[a-zA-Z\d]{5,12}$/
+
+/* form.addEventListener('submit', e => {
+    e.preventDefault();
+});
+ */
+form.firstName.addEventListener('keyup', e =>{
+    if(firstNPattern.test(e.target.value)){
+        form.firstName.setAttribute('class', 'success')
+    } else {
+        form.firstName.setAttribute('class', 'error')
+    }
+})
+
+form.lastName.addEventListener('keyup', e =>{
+    if(lastNPattern.test(e.target.value)){
+        form.lastName.setAttribute('class', 'success')
+    } else {
+        form.lastName.setAttribute('class', 'error')
+    }
+})
+
+form.userEmail.addEventListener('keyup', e =>{
+    if(userEmailPattern.test(e.target.value)){
+        form.userEmail.setAttribute('class', 'success')
+    } else {
+        form.userEmail.setAttribute('class', 'error')
+    }
+})
+
+form.userPassword.addEventListener('keyup', e =>{
+    if(userPassPattern.test(e.target.value)){
+        form.userPassword.setAttribute('class', 'success')
+    } else {
+        form.userPassword.setAttribute('class', 'error')
+    }
+})
+
+form.userPhone.addEventListener('keyup', e =>{
+    if(userPhonePattern.test(e.target.value)){
+        form.userPhone.setAttribute('class', 'success')
+    } else {
+        form.userPhone.setAttribute('class', 'error')
+    }
+})
+
+form.userName.addEventListener('keyup', e =>{
+    if(userNamePattern.test(e.target.value)){
+        form.userName.setAttribute('class', 'success')
+    } else {
+        form.userName.setAttribute('class', 'error')
+    }
+
+    
+})
+
+
+
+
+/* form.addEventListener('submit', (e) =>{
     let messages = [];
     if (firstName.value.length < 3) {
         messages.push("You need more than 3 characters for a name.")
@@ -12,11 +81,7 @@ form.addEventListener('submit', (e) =>{
     e.preventDefault();
     errorElement.innerHTML = messages.join(', ')
     } 
-});
-
-
-
-
+}); */
 
 /*-------chapter 8-------- */
 
