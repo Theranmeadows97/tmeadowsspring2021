@@ -71,7 +71,7 @@ document.addEventListener("keyup", function(event){
                     done: false,
                     trash: false
             });
-            localStorage.setItem("TODO", JSON.stringify(LIST));
+            window.localStorage.setItem("TODO", JSON.stringify(LIST));
             id++
         }
         input.value = "";
