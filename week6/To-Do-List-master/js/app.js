@@ -43,6 +43,16 @@ clear.addEventListener('click', function(){
     location.reload();
 });
 
+//Change the selected text to red or black
+function mouseDown() {
+    var color = document.getElementById("item").style.color;
+   if (color == "black"){
+    document.getElementById("item").style.color = "red";
+   } else if (color == "red"){
+    document.getElementById("item").style.color = "black";
+   }
+} 
+
 // Adding an Item to the list
 function addToDo(todo, id, done, trash){
     if(trash){return};
@@ -50,7 +60,7 @@ function addToDo(todo, id, done, trash){
     const LINE = done ? LINE_THROUGH : "";
 const text = `<li class="item">
 <i class="fa ${DONE} co" job="complete" id="0"></i>
-<p class="text ${LINE}">${todo}</p>
+<p class="text ${LINE}" id="item" onclick="mouseDown()" style="color:black;">${todo}</p>
 <i class="fa fa-trash-o de" job="delete" id="0"></i>
 </li>`;
 const position = "beforeend";
