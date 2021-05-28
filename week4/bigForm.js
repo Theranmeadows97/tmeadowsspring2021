@@ -69,8 +69,6 @@ form.userName.addEventListener('keyup', e =>{
 })
 
 
-
-
 /* form.addEventListener('submit', (e) =>{
     let messages = [];
     if (firstName.value.length < 3) {
