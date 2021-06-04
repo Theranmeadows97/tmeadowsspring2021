@@ -25,12 +25,33 @@
 <!-- HEADER HERE -->
 	<header>
         <h1>Theran Meadows: Portfolio site for WDD 330 </h1>
-        <h2>Spring 2021: Week 3 </h2>
+        <h2>Spring 2021: Week 7</h2>
     </header>
     
 <!-- CONTENT HERE -->
 <main>
-    <h3>Week 3 Notes</h3>
+    <h3>Week 7 Notes</h3>
+    <h4>CORS</h4>
+    <ul>
+        <li>Cross Orgins Resource Sharing</li>
+        <li>Policy Error</li>
+        <li>self.set_header("Access-Control-Allow-Origin","*")<br>
+        Set the header and use the "*" to allow EVERYONE access. You can also allow individual access with a URL</li>
+        <li>Pre-flight OPTIONS request happens when a complex request is sent and the server needs to check if it is allowed.</li>
+        <li>fucntion options (self){<br>self.set_header("Access-Control-Allow-Origin","*" {<br>self.set_header("Access-Control-Allow-Headers","Content-Type")<br>self.set_status(204)<br>self.finish()}</li>
+        <li><a href="https://www.youtube.com/watch?v=Ka8vG5miErk"></a>CORS Explaind by Example</li>
+    </ul>
+    <h4>Chapter 11</h4>
+    <ul>
+        <li>(IIFE) Immediatly Invoked Function Expression</li>
+        <li>Upon defining a function, it is executed.</li>
+        <li><a href="promise.html">Promise Practice</a></li>
+        <li>Synchronus: executes from th top of the code to the bottom in order until the end</li>
+        <li>Asynchronus: Starts at the top of the code and will execute until it hits an asynchronus function and then will make a thread to separatly execute</li>
+        <li>"Not every single function that takes an argument is asynchronous, but in general, most function that takes function argument are going to be asynchronous"</li>
+
+    </ul>
+    <h4><a href="/assignments/week7/hikes5/hiking-complete.html">Hikes Team Assignment</a></h4>
     <h3>Questions</h3>
     </main>
     
